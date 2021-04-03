@@ -24,6 +24,10 @@
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
     "html-webpack-plugin": "^5.3.1",
     "webpack-cli": "^4.6.0"
   }

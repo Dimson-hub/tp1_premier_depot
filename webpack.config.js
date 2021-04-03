@@ -17,36 +17,22 @@ module.exports = (env, argv) => {
     plugins: [htmlPlugin],
     module: {
       rules: [
-        
-
-
         {
-          
-
-          test: /\.(js|jsx)$/, 
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
           test: /\.(png|svg|jpg|gif)$/,
-
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          loader:"file-loader",
+          loader: 'file-loader',
           options: { name: '/static/[name].[ext]' }
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
         }
-        
-        
-        }
-        
-        
-        
-        
       ]
-      
-
-
-      
-        
-      
-    }
+    },
 
   };
 };
